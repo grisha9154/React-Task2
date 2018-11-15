@@ -1,12 +1,11 @@
 class FormField extends DomElement {
-    constructor(elementName, id, type, label){
-        super(elementName, id, type);
+    constructor(id, type, label){
+        super();
+        this.fieldContainer = new DomElement('div', `${id}_container`);
         this.labelElement = new LabelElement(label, id);
-    }
-
-    drawElement(root) {
-        debugger;
-        this.labelElement.drawElement(root);
-        super.drawElement(root);
+        this.field = new DomElement('input', id, type);
+        this.fieldContainer.addChildren(this.labelElement.element);
+        this.fieldContainer.addChildren(this.field.element);
+        this.element = this.fieldContainer.element;
     }
 }

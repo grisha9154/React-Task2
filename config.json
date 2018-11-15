@@ -1,0 +1,22 @@
+[
+    {
+        "id": "mark_form", 
+        "fields": [
+            {
+                "id": "mercedes_mark",
+                "name": "mark",
+                "type": "checkbox"
+            },
+            {
+                "id": "volkswagen_mark",
+                "name": "mark",
+                "type": "checkbox"
+            },
+            {
+                "id": "audi_mark",
+                "name": "mark",
+                "type": "checkbox"
+            }
+        ]
+    }
+]

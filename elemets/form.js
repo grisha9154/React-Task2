@@ -1,12 +1,19 @@
 class Form extends DomElement {
-    constructor(rootElement){
+    constructor(rootElement, id){
         super();
         this.rootElement = rootElement;
+        this.next;
+        this.prev;
+        this.fields = [];
+        this.id
     }
 
-    DrawElement(){
-        const simplText = new FormField('input', 'simpleText', 'text', 'Simple Text');
-        simplText.drawElement(this.rootElement);
+    static loadForm(from){
+        from
+    }
 
+    drawElement(){
+        const simplText = new FormField('simpleText', 'text', 'Simple Text');
+        simplText.drawElement(this.rootElement);
     }
 }
